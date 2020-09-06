@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <!--Layout é o componente mesmo
+                          layout_width
+                       + - - - - - - - - - +
+                       |                   |
+        layout_height  |                   |
+                       |                   |
+                       + - - - - - - - - - +
+
+ - > dp: distancia e figuras DINAMICA
+ - > sp: script e texto, tamanho de texto DINAMICA
+ - > outras: fixa!
+
+
+        wrap_content -> auto conforme componente
+        match_parent -> inherited
+        -->
+
+    <TextView
+        android:id="@+id/tv_topo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem vindo à calculadora do Equilíbrio Financeiro!"
+        android:textColor="#555"
+        android:textSize="30sp"
+        android:background="@color/colorAccent"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aqui, de uma maneira simples, você vai descobrir se suas contas estão equilibradas (ou não)."
+        android:textSize="20sp"
+        android:textColor="#333"
+        android:layout_marginTop="20sp"
+        android:id="@+id/tv_descricao"
+        app:layout_constraintTop_toBottomOf="@id/tv_topo"
+        />
+
+    <!--inicio campos-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual o seu nome?"
+        android:textSize="15sp"
+        android:textColor="#222"
+        android:layout_marginTop="20sp"
+        android:id="@+id/tv_dica_nome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_descricao"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ada Lovelace"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dica_nome"
+        android:layout_marginTop="5dp"
+        android:id="@+id/et_texto_nome"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seu nome deve ter pelo menos 3 letras."
+        android:textSize="10sp"
+        android:textColor="#ff0000"
+        android:layout_marginTop="20sp"
+        android:id="@+id/tv_red_nome"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_texto_nome"
+        app:layout_constraintLeft_toRightOf="@id/et_texto_nome"
+        android:visibility="invisible"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quanto você ganha por mês?"
+        android:textSize="15sp"
+        android:textColor="#222"
+        android:layout_marginTop="20sp"
+        android:id="@+id/tv_dica_valor_mes"
+        app:layout_constraintTop_toBottomOf="@+id/et_texto_nome"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seu salário deve ser maior que 0."
+        android:textSize="10sp"
+        android:textColor="#ff0000"
+        android:layout_marginTop="20sp"
+        android:id="@+id/tv_red_salario"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_texto_valor_mes"
+        app:layout_constraintLeft_toRightOf="@id/et_texto_valor_mes"
+        android:visibility="invisible"
+        />
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="99.999,99"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dica_valor_mes"
+        android:layout_marginTop="5dp"
+        android:id="@+id/et_texto_valor_mes"
+        android:inputType="numberDecimal"
+        />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Quanto você gasta com seus essenciais por mês?"
+    android:textSize="15sp"
+    android:textColor="#222"
+    android:layout_marginTop="20sp"
+    android:id="@+id/tv_dica_essencial_mes"
+    app:layout_constraintTop_toBottomOf="@+id/et_texto_valor_mes"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insira um valor maior que 0."
+        android:textSize="10sp"
+        android:textColor="#ff0000"
+        android:layout_marginTop="20sp"
+        android:id="@+id/tv_red_gastos"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_valor_essencial_mes"
+        app:layout_constraintLeft_toRightOf="@id/et_valor_essencial_mes"
+        android:visibility="invisible"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="99,999,99"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dica_essencial_mes"
+        android:layout_marginTop="5dp"
+        android:id="@+id/et_valor_essencial_mes"
+        android:inputType="numberDecimal"
+        />
+<!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quanto você gasta com o que não é essencial?"
+        android:textSize="15sp"
+        android:textColor="#222"
+        android:layout_marginTop="20sp"
+        android:id="@+id/tv_dica_ferias"
+        app:layout_constraintTop_toBottomOf="@+id/et_valor_nao_essencial_mes"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="99.999,99"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dica_ferias"
+        android:layout_marginTop="5dp"
+        android:id="@+id/et_ferias"
+        android:inputType="number"
+        />-->
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:textSize="30sp"
+        android:id="@+id/bt_01"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_valor_essencial_mes"
+        android:background="@color/colorAccent"
+        android:onClick="calcular"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sua situação atual é:"
+        android:textSize="15sp"
+        android:textColor="#222"
+        android:id="@+id/tv_resultado_texto"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="@+id/bt_01"
+        app:layout_constraintLeft_toRightOf="@id/bt_01"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/tv_resultado_texto_grande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:text="PERIGOSA"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_resultado_texto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado_texto"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seus gastos estão MUITO acima do ideal!! Que tal fazer um bazar com as blusinhas que não usa mais, hein, miga?"
+        android:textSize="15sp"
+        android:textColor="#333"
+        android:layout_marginTop="20sp"
+        android:id="@+id/tv_descricao_resultado"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado_texto_grande"
+        />
+
+
+    <!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="É nois no Android"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:id="@+id/tv_topo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:textSize="30sp"
+        android:textColor="#E91E63"
+        android:id="@+id/tv_segundo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_topo"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terceira Frase"
+        android:textSize="35sp"
+        android:textColor="#E91E63"
+        android:id="@+id/tv_terceiro"
+        app:layout_constraintTop_toBottomOf="@+id/tv_segundo"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quarta Frase"
+        android:textSize="20sp"
+        android:textColor="#E91E63"
+        android:id="@+id/tv_quarto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_terceiro"
+        android:layout_marginTop="50dp"
+        android:visibility="visible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A wild BU appeared!!"
+        android:textSize="35sp"
+        android:textColor="#00BCD4"
+        android:id="@+id/buuu"
+        app:layout_constraintTop_toBottomOf="@+id/tv_terceiro"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_quinto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="oi eu to na lateral"
+        android:textColor="#3F51B5"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_quarto"
+        app:layout_constraintTop_toTopOf="@+id/tv_quarto"
+        android:layout_marginLeft="10sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clica aqui"
+        android:textSize="30sp"
+        android:id="@+id/bt_01"
+        app:layout_constraintTop_toBottomOf="@id/tv_quarto"
+        android:background="@color/colorAccent"
+        android:onClick="clicaAqui"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite algo aqui"
+        app:layout_constraintTop_toBottomOf="@id/bt_01"
+        android:layout_marginTop="30px"
+        android:id="@+id/et_texto"
+        android:inputType="number"
+        />
+
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>
