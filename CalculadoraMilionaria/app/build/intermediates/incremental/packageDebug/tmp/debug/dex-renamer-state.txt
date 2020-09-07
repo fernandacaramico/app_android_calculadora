@@ -1,0 +1,7 @@
+#Sun Sep 06 22:45:57 BRT 2020
+base.0=C\:\\FERNANDA\\BANDTEC\\2020-02\\Programacao_de_App\\AvContinuada1\\CalculadoraMilionaria\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\FERNANDA\\BANDTEC\\2020-02\\Programacao_de_App\\AvContinuada1\\CalculadoraMilionaria\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

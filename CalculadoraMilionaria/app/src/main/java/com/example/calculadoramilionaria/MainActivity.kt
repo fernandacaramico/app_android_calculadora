@@ -57,39 +57,18 @@ class MainActivity : AppCompatActivity() {
             if (gastoReal > gastoIdeal) {
                 tv_resultado_texto_grande.text = "PERIGO!!"
                 tv_resultado_texto_grande.setTextColor(Color.RED)
-                tv_descricao_resultado.text = "$nome, seus gastos estão R$$valorAcima acima do ideal!! Que tal fazer um bazar com as blusinhas que não usa mais, hein, miga?"
+                tv_descricao_resultado.text = "$nome, seus gastos estão R$${"%.2f".format(valorAcima)} acima do ideal!! Que tal Netflix e uma comida caseira para este fim de semana?"
             } else if (gastoReal == gastoIdeal){
                 tv_resultado_texto_grande.text = "CUIDADO..."
                 tv_resultado_texto_grande.setTextColor(Color.parseColor("#ff8c00"))
-                tv_descricao_resultado.text = "$nome, seus gastos estão exatamente no valor ideal, parabéns pela disciplina. Mas cuidado, sair do controle pode ser mais fácil do que você imagina..."
+                tv_descricao_resultado.text = "$nome, seus gastos estão EXATAMENTE no valor ideal, parabéns pela disciplina! Mas tenha cuidado: sair do controle pode ser mais fácil do que você imagina..."
             } else {
                 tv_resultado_texto_grande.text = "SEGURA :)"
                 tv_resultado_texto_grande.setTextColor(Color.GREEN)
-                tv_descricao_resultado.text = "$nome, seus gastos estão dentro do ideal, parabéns! Você deve ser o exemplo da família, continue assim"
+                tv_descricao_resultado.text = "$nome, seus gastos estão dentro do ideal, parabéns! Você deve ser o exemplo da família, continue assim!"
             }
         }
 
     }
-
-    /*
-    *  fun clicaAqui(componente:View) {
-        Toast.makeText(this, "AI MACHUCOU", Toast.LENGTH_SHORT).show()
-
-        tv_topo.text="Opa! trocou!"
-        tv_segundo.text = et_texto.text
-
-        buuu.visibility = View.VISIBLE
-
-        tv_quarto.setTextColor(Color.CYAN)
-        tv_quarto.setTextColor(Color.parseColor("#ff00ff"))
-
-
-        val numeroInteiro = et_texto.text.toString().toInt()
-        val numeroReal = et_texto.text.toString().toDouble()
-
-        tv_segundo.text = "O dobro de $numeroInteiro é ${numeroInteiro*2}"
-
-    }
-    * */
 
 }

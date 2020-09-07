@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
     <!--Layout é o componente mesmo
                           layout_width
                        + - - - - - - - - - +
@@ -19,7 +17,6 @@
  - > dp: distancia e figuras DINAMICA
  - > sp: script e texto, tamanho de texto DINAMICA
  - > outras: fixa!
-
 
         wrap_content -> auto conforme componente
         match_parent -> inherited
@@ -229,88 +226,4 @@
         />
 
 
-    <!--
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="É nois no Android"
-        android:textSize="30sp"
-        android:textColor="#000000"
-        android:id="@+id/tv_topo"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello"
-        android:textSize="30sp"
-        android:textColor="#E91E63"
-        android:id="@+id/tv_segundo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_topo"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Terceira Frase"
-        android:textSize="35sp"
-        android:textColor="#E91E63"
-        android:id="@+id/tv_terceiro"
-        app:layout_constraintTop_toBottomOf="@+id/tv_segundo"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quarta Frase"
-        android:textSize="20sp"
-        android:textColor="#E91E63"
-        android:id="@+id/tv_quarto"
-        app:layout_constraintTop_toBottomOf="@+id/tv_terceiro"
-        android:layout_marginTop="50dp"
-        android:visibility="visible"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="A wild BU appeared!!"
-        android:textSize="35sp"
-        android:textColor="#00BCD4"
-        android:id="@+id/buuu"
-        app:layout_constraintTop_toBottomOf="@+id/tv_terceiro"
-        android:layout_marginTop="5dp"
-        android:visibility="invisible"/>
-
-    <TextView
-        android:id="@+id/tv_quinto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="oi eu to na lateral"
-        android:textColor="#3F51B5"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toRightOf="@+id/tv_quarto"
-        app:layout_constraintTop_toTopOf="@+id/tv_quarto"
-        android:layout_marginLeft="10sp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clica aqui"
-        android:textSize="30sp"
-        android:id="@+id/bt_01"
-        app:layout_constraintTop_toBottomOf="@id/tv_quarto"
-        android:background="@color/colorAccent"
-        android:onClick="clicaAqui"
-        />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Digite algo aqui"
-        app:layout_constraintTop_toBottomOf="@id/bt_01"
-        android:layout_marginTop="30px"
-        android:id="@+id/et_texto"
-        android:inputType="number"
-        />
-
-    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
